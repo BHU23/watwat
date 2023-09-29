@@ -18,15 +18,24 @@ func SetupDatabease(){
 	}
 
 	database.AutoMigrate(
-		&Member{},
-		&Creator{},
+		&AccountWat{},
+		&Donate{},
+		&DonateType{},
+		&Donate{},
 		&Event{},
-		&Request{},
 		&EventType{},
 		&Host{},
+		&Item{},
+		&ItemLoan{},
+		&ItemLoanItem{},
+		&Member{},
+		&MemberRequest{},
+		&Monk{},
 		&Place{},
 		&PlaceUse{},
-		&PlaceUseHasPlace{},
+		&PlaceUsePlace{},
+		&Request{},
+		&Role{},
 		&Status{},
 	)
 	db = database

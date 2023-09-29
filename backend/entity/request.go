@@ -17,12 +17,14 @@ type Request struct {
 	EventID   *uint
 	Event Event `gorm:"foreignKey:EventID"`
 
-	CreatorID   *uint
-	Creator Creator `gorm:"foreignKey:CreatorID"`
-
 	MemberID   *uint
 	Member Member `gorm:"foreignKey:MemberID"`
 
+	ItemLoanID   *uint
+	ItemLoan ItemLoan `gorm:"foreignKey:ItemLoanID"`
+
 	StatusID *uint
 	Status   Status `gorm:"foreignKey:StatusID"`
+
+	MemberRequests []MemberRequest `gorm:"foreignKey:RequestID"`
 }

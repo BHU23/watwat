@@ -12,7 +12,7 @@ type Event struct {
 	TimeOfBegin time.Time
 	DateEnd     string
 	TimeOfEnd   time.Time
-	OutLocation string
+	OutPlace 	string
 	UserTel     int64
 	Description string
 

@@ -9,5 +9,11 @@ type Place struct {
 	gorm.Model
 	PlaceName  string `gorm:"uniqueIndex"`
 
-	PlaceUseHasPlaces []PlaceUseHasPlace `gorm:"foreignKey:PlaceID"`
+	StatusID *uint
+	Status   Status `gorm:"foreignKey:StatusID"`
+
+	WatID   *uint
+	Wat Wat `gorm:"foreignKey:WatID"`
+
+	PlaceUsePlaces []PlaceUsePlace `gorm:"foreignKey:PlaceID"`
 }
