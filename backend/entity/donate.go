@@ -16,6 +16,7 @@ type Donate struct {
 	Thing_amount   float64
 	Shipping_agent string
 	Shipping_id    string
+	Note           string
 
 	MemberID *uint
 	Member   Member `gorm:"foreignKey:MemberID"`

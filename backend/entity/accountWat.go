@@ -8,7 +8,7 @@ import (
 
 type AccountWat struct {
 	gorm.Model
-	Step   string
+	PivtureAccount string `gorm:"uniqueIndex"`
 	SentAt time.Time
 
 	WatID *uint
