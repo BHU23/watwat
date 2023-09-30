@@ -7,31 +7,27 @@ BrowserRouter as Router,
 Routes,
 Route,
 Link,
+NavLink,
 } from "react-router-dom";
-
-const setCurrentPage = (val: string) => {
-  localStorage.setItem("page", val);
-};
-
+import Logout from './bnt/logout';
+import NavbarUser from './navbar/navbarUser';
 function Header() {
   return (
     <>
       <header>
         <div className='headertop'>
           <Link to="./sharch" className='logo'>
-            <img src={logo} alt="Logo" style={{ width: "65px", height: "65px", borderRadius: "50%" }} />
+            <img src={logo} alt="Logo" style={{ width: "60px", height: "60px", borderRadius: "50%" }} />
             <span style={{ padding: "20px", fontWeight:"600", fontSize:"30px"}}>Wat Wat</span>
           </Link>
-          <div className='horizontal-menu' style={{ width:"50%" }}>
-              <li className='manu-1'><Link to="./main">หน้าหลัก</Link></li>
-              <li className='manu-2'><Link to="./eventRequest">ขอจัดกิจกรรม</Link></li>
-              <li className='manu-3'><Link to="./itemRequest">ขอใช้สถานที่</Link></li>
-              <li className='manu-4'><Link to="./placeRequest">ขอยืม/คืนสิ่งของ</Link></li>
-              <li className='manu-5'><Link to="./donate">บริจาค</Link></li>
+          <div className="horizontal">
+            <NavbarUser/>
+          </div>
+          <div className='bnt-menu'>
+            <Logout/>
           </div>
           <div className="proflie">
-            <Link className="btn logout" to="/">ออกจากระบบ</Link>
-            <img src={avatar} alt="Avatar" style={{ width: "65px", height: "65px", borderRadius: "50%" }} />
+            <img src={avatar} alt="Avatar" style={{ width: "60px", height: "60px", borderRadius: "50%" }} />
           </div>
         </div>
           <div className='line'></div>

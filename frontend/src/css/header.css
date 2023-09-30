@@ -12,7 +12,7 @@ header {
     width: 100%;
     background-color: #ffff;
     /* height: 12vh; */
-    height: 96px;
+    height: 80px;
     display: flex;
     font-size: 16px;
     flex-direction: column;
@@ -36,43 +36,58 @@ header {
     width: 25%;
 }
 
-.horizontal-menu {
+.horizontal {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     width: 50%;
     height: 100%;
 }
+.bnt-menu{
+    width: 18%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+/*.horizontal-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 ;
+    margin: 0;
+    height: 100%;
+}
+
 .horizontal-menu li::before {
     display: inline-block;
 }
 
-/* .horizontal-menu li a {
-    color: #000;
-    position: relative;
-    text-decoration: none;
-    padding: 0 10px;
-    height: 100%;
-} */
 .horizontal-menu li {
     color: #000;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
     text-decoration: none;
-    padding: 0 10px;
+    text-align: center;
+    padding: 0 ;
     height: 100%;
 }
-.horizontal-menu li::after {
+.horizontal-menu li a{
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.horizontal-menu li::after{
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 5px;
-    background: #334756;
+    background: #D9D9D9;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform 0.5s;
@@ -82,20 +97,21 @@ header {
     transform-origin: left;
     transform: scaleX(1);
 }
-.horizontal-menu li:hover {
+.horizontal-menu li a:hover{
     cursor: pointer;
+    border-top: none;
 }
-.horizontal-menu li:hover a{
+.horizontal-menu li a.active{
     color: #F0A500;
-}
-
+    border-top: 5px solid #334756;
+} */
 .proflie {
     display: flex;
     align-items: center;
     justify-content: end;
     color: #000;
     margin-right: 45px;
-    width: 25%;
+    width: 7%;
 }
 
 a {
@@ -103,19 +119,6 @@ a {
     text-decoration: none;
 }
 
-.btn.logout {
-    border-radius: 15px;
-    background-color: #F0A500;
-    text-align: center;
-    width: 150px;
-    height: 40px;
-    margin-right: 20px;
-    font-size: 16px;
-}
-.btn.logout:hover{
-    background-color: #D9D9D9;
-    font-size: 18px;
-}
 
 .line {
     height: 5%;
