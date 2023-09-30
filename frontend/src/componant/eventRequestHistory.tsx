@@ -39,7 +39,7 @@ function EventRequestHistory() {
                   </div>
                 <div className="request_note">
                    <div className="note">หมายเหตุ :</div>
-                <div className="noteInfrom">เนื่องจากมีกิจกรรมแจ้งขอจัดมาก่อนหน้านี้แล้ว</div>   
+                    <div className="noteInfrom">เนื่องจากมีกิจกรรมแจ้งขอจัดมาก่อนหน้านี้แล้ว</div>   
                 </div>
                    
             </div>
